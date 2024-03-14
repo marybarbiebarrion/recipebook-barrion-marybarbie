@@ -6,6 +6,7 @@
 <body>
     {% include 'ledger/header.html' %}
     <h2>{{ recipe.name }}</h2>
+    <p>Author: {{ recipe.author.user.username }}</p>
     <ul>
     {% for recipe_ingredient in object.ingredients.all %}
         <li>{{ recipe_ingredient.ingredient.name }}: {{ recipe_ingredient.quantity }}</li>
