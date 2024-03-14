@@ -4,7 +4,7 @@
     <title>{{ recipe.name }}</title>
 </head>
 <body>
-    <h1>Recipe Book</h1>
+    {% include 'ledger/header.html' %}
     <h2>{{ recipe.name }}</h2>
     <ul>
     {% for recipe_ingredient in object.ingredients.all %}
