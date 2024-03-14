@@ -14,3 +14,4 @@ class RecipeListView(ListView):
 class RecipeDetailView(LoginRequiredMixin, DetailView):
     model = Recipe
     template_name = "ledger/recipe_detail.html"
+    login_url = '/accounts/login/'
