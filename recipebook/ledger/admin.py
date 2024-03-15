@@ -13,6 +13,8 @@ class RecipeAdmin(admin.ModelAdmin):
 class IngredientAdmin(admin.ModelAdmin):
     model = Ingredient
 
+    search_fields = ['name',]
+
 
 admin.site.register(Recipe, RecipeAdmin)
 admin.site.register(Ingredient)
