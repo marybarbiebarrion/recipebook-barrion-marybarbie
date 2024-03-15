@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Recipe, RecipeIngredient, Ingredient
 
 
@@ -12,9 +13,7 @@ class RecipeAdmin(admin.ModelAdmin):
 
 class IngredientAdmin(admin.ModelAdmin):
     model = Ingredient
-
-    search_fields = ['name',]
-
+    
 
 admin.site.register(Recipe, RecipeAdmin)
 admin.site.register(Ingredient)
