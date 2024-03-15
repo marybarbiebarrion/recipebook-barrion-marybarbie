@@ -4,8 +4,8 @@
     <title>Login Page</title>
 </head>
 <body>
-    {% include 'ledger/header.html' %}
-    <h1>Login</h1>
+    <h1>Recipe Book</h1>
+    <h2>Login</h2>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
