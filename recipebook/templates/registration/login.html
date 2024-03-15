@@ -4,12 +4,13 @@
     <title>Login Page</title>
 </head>
 <body>
+    {% include 'ledger/header.html' %}
     <h1>Login</h1>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Login</button>
     </form>
-    <a href="{% url 'pasword_reset'%}">Forgot your password?</a>
+    <a href="{% url 'password_reset'%}">Forgot your password?</a>
 </body>
 </html>
