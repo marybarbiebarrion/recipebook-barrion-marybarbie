@@ -1,12 +1,16 @@
 <header>
-    <h1>Recipe Book</h1>
-    {% if user.is_authenticated %}
-        <p>Welcome, {{ user.username }}</p>
-        <form action="{% url 'logout' %}" method="POST">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
+    {% if request.path == '/accounts/login/' %}
+        <h1>Recipe Book</h1>
     {% else %}
-        <a href="{% url 'login' %}">Login</a>
+        <h1>Recipe Book</h1>
+        {% if user.is_authenticated %}
+            <p>Hello, {{ user.username }}!</p>
+            <form action="{% url 'logout' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
     {% endif %}
 </header>
